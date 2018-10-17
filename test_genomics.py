@@ -1,7 +1,7 @@
 from genomics import complement_dna
+import pytest
 
-def test_complement_dna():
-    assert complement_dna('GGC') == 'GCC'
+@pytest.mark.parametrize('seq,comp', [('GGC', 'GCC'), ('TTTGGC', 'GCCAAA')])
+def test_complement_dna(seq, comp):
+    assert complement_dna(seq) == comp
 
-def test_complement_dna2():
-    assert complement_dna('TTTGGC') == 'GCCAAA'
