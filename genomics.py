@@ -1,4 +1,6 @@
 
+complement_nts = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'T'}
+
 def get_dna_sequence():
     """
     Returns a DNA sequence.
@@ -24,13 +26,7 @@ def complement_dna(seq):
         >>> complement_dna('TTTGGC')
         'GCCAAA'
     """
-    complement_nts = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'T'}
-    comp_seq = []
-    for nt in seq:
-        comp_nt = complement_nts[nt]
-        comp_seq.append(comp_nt)
-
-    return ''.join(comp_seq)[::-1]
+    return ''.join(complement_nts[nt] for nt in reversed(seq))
 
 
 
