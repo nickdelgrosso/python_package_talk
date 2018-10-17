@@ -50,7 +50,16 @@ def transcribe_dna(seq):
 
 
 def has_start_codon(rna_seq):
-    pass
+    """
+    Returns True if 'AUG' in the RNA sequence
+    Args:
+        rna_seq (str): an RNA sequence
+
+    Returns:
+        has_AUG (bool): whether AUG is in the RNA
+
+    """
+    return 'AUG' in rna_seq
 
 
 import doctest
