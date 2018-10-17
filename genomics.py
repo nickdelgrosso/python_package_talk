@@ -1,8 +1,10 @@
 
-# get the sequence
+seq = get_dna_sequence()
 
-# Get the complement
+comp_seq = complement_dna(seq)
 
-# transcribe to RNA
+rna_seq = transcribe_dna(seq)
+rna_comp_seq = transcribe_comp_dna(seq)
 
-# check for AUG
+print(has_start_codon(rna_seq))
+print(has_start_codon(rna_comp_seq))
