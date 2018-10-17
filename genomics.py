@@ -1,5 +1,6 @@
 
 complement_nts = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'T'}
+complement_rna_nts = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'U'}
 
 def get_dna_sequence():
     """
@@ -17,7 +18,8 @@ def complement_dna(seq):
     Args:
         seq (str): a DNA sequence
 
-    Returns: comp_seq (str)
+    Returns:
+        comp_seq (str)
 
     Examples:
         >>> complement_dna('GGC')
@@ -31,7 +33,20 @@ def complement_dna(seq):
 
 
 def transcribe_dna(seq):
-    pass
+    """
+    Transcribes DNA sequence to RNA sequence.
+
+    Args:
+        seq (str): a DNA sequence
+
+    Returns:
+        rna_seq (str): an RNA sequence
+
+    Examples:
+        >>> transcribe_dna('GTCAA')
+        'UUGAC'
+    """
+    return ''.join(complement_rna_nts[nt] for nt in reversed(seq))
 
 
 def has_start_codon(rna_seq):
