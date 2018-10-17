@@ -24,17 +24,11 @@ def complement_dna(seq):
         >>> complement_dna('TTTGGC')
         'GCCAAA'
     """
+    complement_nts = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'T'}
     comp_seq = []
     for nt in seq:
-        if nt == 'G':
-            rnt = 'C'
-        elif nt == 'C':
-            rnt = 'G'
-        elif nt == 'T':
-            rnt = 'A'
-        elif nt == 'A':
-            rnt = 'T'
-        comp_seq.append(rnt)
+        comp_nt = complement_nts[nt]
+        comp_seq.append(comp_nt)
 
     return ''.join(comp_seq)[::-1]
 
