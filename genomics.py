@@ -28,7 +28,10 @@ def complement_dna(seq):
         >>> complement_dna('TTTGGC')
         'GCCAAA'
     """
-    return ''.join(complement_nts[nt] for nt in reversed(seq))
+    try:
+        return ''.join(complement_nts[nt] for nt in reversed(seq))
+    except KeyError:
+        raise ValueError("A bad nucleotide was found!  Not valid DNA!!!")
 
 
 
