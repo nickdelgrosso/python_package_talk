@@ -36,8 +36,8 @@ def complement_dna(seq):
             rnt = 'T'
         comp_seq.append(rnt)
 
-    comp_seq = ''.join(comp_seq)
-    return comp_seq[::-1]
+    return ''.join(comp_seq)[::-1]
+
 
 
 def transcribe_dna(seq):
