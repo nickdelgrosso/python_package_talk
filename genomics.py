@@ -1,10 +1,15 @@
 
-seq = get_dna_sequence()
+def get_dna_sequence():
+    pass
 
-comp_seq = complement_dna(seq)
 
-rna_seq = transcribe_dna(seq)
-rna_comp_seq = transcribe_comp_dna(seq)
+def complement_dna(seq):
+    pass
 
-print(has_start_codon(rna_seq))
-print(has_start_codon(rna_comp_seq))
+
+def transcribe_dna(seq):
+    pass
+
+
+def has_start_codon(rna_seq):
+    pass
