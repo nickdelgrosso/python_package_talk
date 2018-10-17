@@ -1,6 +1,11 @@
 
 def get_dna_sequence():
-    pass
+    """
+    Returns a DNA sequence.
+
+    Returns: dna (str)
+    """
+    return 'GCCCTTTGTAAAG'
 
 
 def complement_dna(seq):
