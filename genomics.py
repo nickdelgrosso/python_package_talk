@@ -8,7 +8,7 @@ def get_dna_sequence():
 
     Returns: dna (str)
     """
-    return 'GCCCTTTGTAAAG'
+    return 'GCCCATTTGTAAAG'
 
 
 def complement_dna(seq):
